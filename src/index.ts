@@ -9,8 +9,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 const app = express();
 
+const MONGO_URI: string = process.env.MongoURI || 'mongodb+srv://rivunaskar0:sqdl@cluster0.c02ypwy.mongodb.net/Shopify?retryWrites=true&w=majority';
 
-const MONGO_URI: string = process.env.MongoURI || '';
 mongoose.connect(MONGO_URI).then(() => {
     console.log("DB CONNECTED!");
 })
